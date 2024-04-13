@@ -5,7 +5,7 @@
       "module": "ESNext",
       "target": "es5",
     //   allow to write jsx constructions
-      "jsx": "react",
+      "jsx": "react-jsx",
       "allowJs": true,
       "moduleResolution": "node",
       //
