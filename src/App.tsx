@@ -1,14 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import './index.scss'
+import './styles/index.scss'
 import { Link } from "react-router-dom";
 import { CounterPageAsync } from "./pages/CounterPage/CounterPage.lazy";
 import { MainPageAsync } from "./pages/MainPage/MainPage.lazy";
-import { Suspense } from "react";
-
+import { Suspense} from "react";
+import { useTheme } from "./theme/useTheme";
 
 const App = () => {
+    const { theme, toogleTheme } = useTheme();
+
     return(
-        <div className="app">
+        <div className={`app ${theme}`}>
+            <button onClick={toogleTheme}>toogle</button>
             <Link to={'/'}>
                 Главная
             </Link>
