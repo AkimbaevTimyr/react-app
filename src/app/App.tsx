@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import './styles/index.scss'
 import { Link } from "react-router-dom";
-import { CounterPageAsync } from "./pages/CounterPage/CounterPage.lazy";
-import { MainPageAsync } from "./pages/MainPage/MainPage.lazy";
+import { MainPage } from "pages/MainPage";
 import { Suspense} from "react";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames/classNames";
+import { useTheme } from "app/providers/ThemeProvider/";
+import { classNames } from "shared/lib/classNames/classNames";
+import { AboutPage } from "pages/AboutPage";
 
 const App = () => {
     const { theme, toogleTheme } = useTheme();
@@ -16,13 +16,13 @@ const App = () => {
             <Link to={'/'}>
                 Главная
             </Link>
-            <Link to={'/counter'}>
-                coUNTER
+            <Link to={'/about'}>
+                About
             </Link>
             <Suspense fallback={<div>Loading ...</div>}>
                 <Routes>
-                    <Route path="/counter" element={<CounterPageAsync/>}/>
-                    <Route path="/" element={<MainPageAsync />} />
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/about" element={<AboutPage />} />
                 </Routes>
             </Suspense>
 

@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './app/App';
 import { BrowserRouter } from 'react-router-dom';
-import ThemeProdiver from './theme/ThemeProvider';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <ThemeProdiver>
+            <ThemeProvider>
                 <App />
-            </ThemeProdiver>
+            </ThemeProvider>
         </BrowserRouter>,
     </React.StrictMode>,
     rootElement

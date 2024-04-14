@@ -22,7 +22,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             rules: buildLoaders(options),
         },
         //что бы могли импортировать компоненты без указания их расширения
-        resolve: buildResolvers(),  
+        resolve: buildResolvers(options),  
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
     };
