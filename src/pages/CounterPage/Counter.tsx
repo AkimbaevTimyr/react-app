@@ -1,6 +1,6 @@
 import styles from './Counter.module.scss'
 
-export const Counter = () => {
+const Counter = () => {
 
     return(
         <div className={styles.content}>
@@ -8,3 +8,5 @@ export const Counter = () => {
         </div>
     )
 }
+
+export default Counter;
