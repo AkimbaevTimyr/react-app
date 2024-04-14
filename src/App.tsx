@@ -5,12 +5,13 @@ import { CounterPageAsync } from "./pages/CounterPage/CounterPage.lazy";
 import { MainPageAsync } from "./pages/MainPage/MainPage.lazy";
 import { Suspense} from "react";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 const App = () => {
     const { theme, toogleTheme } = useTheme();
 
     return(
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <button onClick={toogleTheme}>toogle</button>
             <Link to={'/'}>
                 Главная
