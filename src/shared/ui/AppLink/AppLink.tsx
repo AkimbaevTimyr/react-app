@@ -3,7 +3,6 @@ import styles from './AppLink.module.scss'
 import { Link, LinkProps } from "react-router-dom"
 import React, { FC } from "react";
 
-
 export enum AppLinkTheme {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',

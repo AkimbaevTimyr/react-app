@@ -1,5 +1,12 @@
 .appLink {
+    display: block;
     color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-l);
+}
+
+.appLink:hover {
+    transform: scaleX(1.2);
 }
 
 .primary {
